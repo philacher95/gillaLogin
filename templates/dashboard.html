@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}dashboard{% endblock %}
+
+{% block body %}
+<style>
+    #flash{
+     margin-top: 50px;
+    }
+</style>
+{% include "include/navbar.html"%}
+<div id="flash" class="container alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+   <h1>You Have Successfully Logged in as {{ name }}</h1>
+</div>
+
+
+
+{% endblock %}

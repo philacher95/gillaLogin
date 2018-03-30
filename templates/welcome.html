@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}index{% endblock %}
+
+
+{% block body %}
+{% block navbar %}{% include "include/rawbar.html"%}{% endblock %}
+<style>
+    .jumbotron{
+     margin-top: 50px;
+    }
+</style>
+
+<div class="jumbotron container">
+        <div class="alert alert-success">
+           {% for message in get_flashed_messages() %}
+                 {{ message }} <h1>{{ name }}</h1>
+         </div>
+           {% endfor %}
+
+      <hr>
+      <h6>Please Login To Your Page</h6><button class="btn btn-info"><a href="/login">Login</a></button>
+</div>
+{% endblock %}
